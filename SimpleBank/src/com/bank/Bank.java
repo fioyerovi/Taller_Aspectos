@@ -2,6 +2,9 @@ package com.bank;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.After;
 
 public class Bank {
 	static final int EXIT = 5;
@@ -80,6 +83,7 @@ public class Bank {
         int id = Integer.valueOf(readConsole("Key: "));
         double money = Double.valueOf(readConsole("Dinero a depositar: "));
         users.get(id-1).setMoney(users.get(id-1).getMoney() + money);
+        
     }
     public static void moneyWithdrawal(){
         int id = Integer.valueOf(readConsole("Key: "));
